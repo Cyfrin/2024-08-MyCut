@@ -1,66 +1,57 @@
-## Foundry
+# Fjord Token Staking
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### Prize Pool
 
-Foundry consists of:
+- High - 100 XP
+- Medium - 20 XP
+- Low - 2 XP
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- Starts: August, 29 2024 Noon UTC
 
-## Documentation
+- Ends: September 05, 2024 Noon UTC
 
-https://book.getfoundry.sh/
+- nSLOC: ???
 
-## Usage
+[//]: # (contest-details-open)
 
-### Build
+## About the Project
 
-```shell
-$ forge build
+MyCut is a contest rewards distribution protocol which allows the set up and management of multiple rewards distributions, allowing authorized claimants 90 days to claim before the manager takes a cut of the remaining pool and the remainder is distributed equally to those who claimed in time!
+
+[//]: # (contest-details-close)
+
+[//]: # (scope-open)
+
+## Scope (contracts)
+
+All Contracts in `src` are in scope.
+
+```js
+src/
+├── ContestManager.sol
+├── Pot.sol
 ```
 
-### Test
+## Compatibilities
 
-```shell
-$ forge test
-```
+EVM Equivalent Chains Only
+Standard ERC20 Tokens Only, no Weird ERC20s, no FoT or Rebasing
 
-### Format
 
-```shell
-$ forge fmt
-```
+[//]: # (scope-close)
 
-### Gas Snapshots
+[//]: # (getting-started-open)
 
-```shell
-$ forge snapshot
-```
+## Setup
 
-### Anvil
+Will Fill Out Later
 
-```shell
-$ anvil
-```
+[//]: # (getting-started-close)
 
-### Deploy
+[//]: # (known-issues-open)
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## Known Issues
 
-### Cast
+- Incompatibility with Non-Standard ERC20 Tokens
 
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+[//]: # (known-issues-close)
