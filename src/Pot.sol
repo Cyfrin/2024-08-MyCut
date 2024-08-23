@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+pragma solidity ^0.8.20;
 
 import {IERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 import {Ownable} from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
@@ -27,11 +27,7 @@ contract Pot is Ownable(msg.sender) {
         remainingRewards = totalRewards;
         i_deployedAt = block.timestamp;
 
-        if (i_token.balanceOf(msg.sender) < i_totalRewards) {
-            revert Pot__InsufficientFunds();
-        }
-
-        i_token.transfer(address(this), i_totalRewards);
+        // i_token.transfer(address(this), i_totalRewards);
 
         for (uint256 i = 0; i < i_players.length; i++) {
             playersToRewards[i_players[i]] = i_rewards[i];
@@ -67,6 +63,10 @@ contract Pot is Ownable(msg.sender) {
 
     function _transferReward(address player, uint256 reward) internal {
         i_token.transfer(player, reward);
+    }
+
+    function getToken() public view returns (IERC20) {
+        return i_token;
     }
 
     function checkCut(address player) public view returns (uint256) {
