@@ -10,13 +10,18 @@
 
 - Ends: September 05, 2024 Noon UTC
 
-- nSLOC: ???
+- nSLOC: 106
 
 [//]: # (contest-details-open)
 
 ## About the Project
 
 MyCut is a contest rewards distribution protocol which allows the set up and management of multiple rewards distributions, allowing authorized claimants 90 days to claim before the manager takes a cut of the remaining pool and the remainder is distributed equally to those who claimed in time!
+
+### Actors
+
+- Owner/Admin (Trusted) - Is able to create new Pots, close old Pots when the claim period has elapsed and fund Pots
+- User/Player - Can claim their cut of a Pot
 
 [//]: # (contest-details-close)
 
@@ -34,8 +39,8 @@ src/
 
 ## Compatibilities
 
-EVM Equivalent Chains Only
-Standard ERC20 Tokens Only, no Weird ERC20s, no FoT or Rebasing
+- Blockchains: EVM Equivalent Chains Only
+- Tokens: Standard ERC20 Tokens Only
 
 
 [//]: # (scope-close)
@@ -44,7 +49,20 @@ Standard ERC20 Tokens Only, no Weird ERC20s, no FoT or Rebasing
 
 ## Setup
 
-Will Fill Out Later
+Clone the repo
+```bash
+git clone https://github.com/Cyfrin/2024-08-MyCut.git
+```
+Open in VSCode
+```bash
+code 2024-08-MyCut/
+```
+
+Build and run tests
+```bash
+forge test
+```
+
 
 [//]: # (getting-started-close)
 
@@ -52,6 +70,6 @@ Will Fill Out Later
 
 ## Known Issues
 
-- Incompatibility with Non-Standard ERC20 Tokens
+- No known issues
 
 [//]: # (known-issues-close)

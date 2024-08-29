@@ -106,8 +106,8 @@ contract TestMyCut is Test {
         ContestManager(conMan).fundContest(0);
         vm.stopPrank();
 
-        uint256 totalRewards = ContestManager(conMan).getContestTotalRewards(contest);
-        assertEq(totalRewards, 4);
+        uint256 rewardsSum = ContestManager(conMan).getContestTotalRewards(contest);
+        assertEq(rewardsSum, 4);
     }
 
     function testCanAddMultipleContests() public mintAndApproveTokens {
