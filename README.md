@@ -1,4 +1,4 @@
-# Fjord Token Staking
+# First Flight #23: MyCut
 
 ### Prize Pool
 
